@@ -20,40 +20,48 @@ I engineered a reactive, state-driven user interface that transforms complex med
 ## 🎨 1. UI/UX Design Engineering & Optimization
 Resolved complex interface architecture challenges to deliver high-fidelity consistency for specialized medical environments.
 
-*   **Column Standardization:** Implemented a fluid CSS Grid architecture across data-heavy tables. Recalibrated widths to ensure pixel-perfect alignment across diverse resolutions:
+*   **Column Standardization:** Implemented a fluid CSS Grid architecture across data-heavy tables. Recalibrated widths to ensure pixel-perfect consistency:
     *   **Primary Identifier/Stock Code:** 12%
     *   **Temporal/Expiry Data:** 10%
     *   **Status/Operational Metadata:** 15%
-*   **Ant-Design Layout Realignment:** Corrected critical fixed-header misalignment anomalies in Ant-Design tables. By enforcing strict percentage constraints and applying `tableLayout="fixed"`, I ensured perfect vertical parity between headers and body data rows.
+*   **Ant-Design Layout Realignment:** Corrected critical fixed-header misalignment anomalies in Ant-Design tables by enforcing strict percentage constraints and applying `tableLayout="fixed"`.
 *   **Brand Identity Integration:** Enforced a strict visual hierarchy using **Corporate Brand Accents (#ED017F)** for headers, active states, and interactive call-to-action elements.
 
 ## 🧠 2. Advanced State Management (Redux & Sagas)
 Architected a modular data-flow system to handle complex asynchronous operations and real-time synchronization.
 
-*   **Live Reactive Tables:** Engineered real-time state listeners for Variance and Inventory Reports. This enables **automatic UI hydration** and data recalculation immediately post-edit, entirely deprecating the need for manual page refreshes.
-*   **Asynchronous Saga Orchestration:** Implemented a robust "Action-to-Saga-to-API" pattern. This ensures that heavy clinical data fetching remains non-blocking, maintaining a smooth UI thread even during large data payloads.
+*   **Live Reactive Tables:** Engineered real-time state listeners. This enables **automatic UI hydration** and data recalculation immediately post-edit, entirely deprecating the need for manual page refreshes.
+*   **Asynchronous Saga Orchestration:** Implemented a robust "Action-to-Saga-to-API" pattern. This ensures that heavy clinical data fetching remains non-blocking, maintaining a smooth UI thread.
 *   **Hydration Logic:** Developed custom Redux reducers to preserve state consistency during complex context-switching between different facility locations.
 
 ## 🔔 3. Real-Time Event Management UI
 Developed a comprehensive multi-channel notification ecosystem to ensure critical medical alerts are addressed instantly.
 
-*   **Component Ecosystem:** Engineered a high-performance notification suite including:
-    *   **NotificationBell:** Real-time unread count indicator.
-    *   **NotificationList & Modal:** Interactive containers for alert history.
-    *   **Reactive NotificationItem:** Individual alerts with visual priority coding.
-*   **Contextual Deep-Linking:** Architected a sophisticated routing system that enables **one-click navigation**. Clicking a notification automatically directs the user to the specific record entry (e.g., Variance ID), eliminating manual search time.
+*   **Component Ecosystem:** Engineered a high-performance notification suite including `NotificationBell`, `NotificationList`, and `NotificationModal` with reactive `NotificationItem` components.
+*   **Contextual Deep-Linking:** Architected a routing system that enables **one-click navigation**. Clicking a notification automatically directs the user to the specific record entry, eliminating manual search time.
 
 ## 🧭 4. Navigation & Component Lifecycle
-*   **Navigation Deadlock Resolution:** Eliminated critical navigation loops by decoupling component loading states from ID validation logic. This allows data tables to seamlessly fetch and render new datasets during rapid location switching.
-*   **Modular Component Architecture:** Developed a library of reusable, high-performance UI components including:
-    *   **AMultiSelect:** Specialized dropdown selector for clinical categorization.
-    *   **CustomPagination:** Optimized table navigation for datasets exceeding 2,500+ records.
-    *   **Visual Feedback:** Integrated global loading spinners and user-friendly error boundaries to improve perceived performance.
+*   **Navigation Deadlock Resolution:** Eliminated critical navigation loops by decoupling component loading states from ID validation logic.
+*   **Modular Component Architecture:** Developed a library of reusable, high-performance UI components including `AMultiSelect`, `CustomPagination`, and global loading spinners.
 
 ## ⚙️ 5. Key Frontend Features
 *   **Role-Based UI Controls:** Dynamic rendering of interface elements based on user permission levels.
 *   **Fidelity Reporting:** Interactive Variance Tracking systems with visual red-flagging (#ff5050) for critical discrepancies.
 *   **Responsive Fluidity:** Fully optimized for desktop workstations and clinical tablet devices.
+
+## 📚 6. Architectural Mastery & State Mapping (New)
+To maintain a clean codebase, I mapped the frontend architecture to mirror backend separation of concerns:
+
+*   **File Structure Isolation:** 
+    *   `.jsx` is strictly reserved for UI components.
+    *   `.js` handles pure JavaScript utilities.
+    *   `.less` and `.css` are scoped modularly to prevent style bleeding.
+*   **Redux-Saga Lifecycle:** Mastered the 5-step state loop: Constants (Action Types) ➡️ Actions (Pay-loaders) ➡️ Sagas (API Middleware) ➡️ Reducers (State Hydrators) ➡️ Root Saga (Central Orchestrator).
+*   **Distributed MVC Analogy:** I treat frontend state management like a mirrors of backend patterns:
+    *   *URL Routes* ➡️ Action Constants
+    *   *Controllers* ➡️ Action Creators
+    *   *Services* ➡️ Saga Handlers
+    *   *Database* ➡️ Redux Store State
 
 ---
 
@@ -64,4 +72,4 @@ By fusing **Reactive Redux State Management** with **Deep-Linked Routing** and *
 
 ## 👥 Contributors
 - **Lead Frontend Developer**: Sir M Saleem
-- **Technical Management**: Sir Ghayoor Haider# enterprise-feontend-architecture
+- **Technical Management**: Sir Ghayoor Haider
